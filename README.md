@@ -1,10 +1,10 @@
-# marjoballabani.me
+# jagadeesh3131.vercel.app
 
 A neo-brutalist personal portfolio built with vanilla HTML, CSS, and JavaScript. No frameworks, no build tools, no dependencies - just raw code with bold design choices.
 
 This is a personal fun project, not a production template. The code prioritizes creativity and experimentation over best practices. It's a playground for trying out ideas, animations, and interactions - not a reference architecture.
 
-**[Live Site](https://marjoballabani.me)**
+**[Live Site](https://jagadeesh3131.vercel.app)**
 
 ## What is Neo-Brutalism?
 
@@ -46,7 +46,7 @@ The palette uses CSS custom properties for light/dark theming:
 
 **Scroll-Driven Highlights** - Text highlights animate in from left/right as you scroll, mimicking a highlighter pen being drawn across the page.
 
-**Interactive Map** - Leaflet.js with Stamen watercolor tiles, styled with a grid overlay and pirate illustration. Clicking timeline entries flies to the corresponding map marker.
+**Interactive Map** - Leaflet.js styled with a grid overlay and pirate illustration. Clicking timeline entries flies to the corresponding map marker.
 
 **Matrix Typing Effect** - The hero greeting scrambles through random characters before resolving to the final text.
 
@@ -54,7 +54,7 @@ The palette uses CSS custom properties for light/dark theming:
 
 ## Terminal Mode
 
-Visit [/terminal.html](https://marjoballabani.me/terminal.html) for an interactive terminal-style resume.
+Visit [/terminal.html](https://jagadeesh3131.vercel.app/terminal.html) for an interactive terminal-style resume.
 
 Features:
 - Type `help` to see available commands

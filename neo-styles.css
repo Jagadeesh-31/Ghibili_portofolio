@@ -3462,9 +3462,9 @@ body[data-theme="dark"] .language-item:hover {
 
 .creator-projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
-  max-width: 750px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -3484,11 +3484,33 @@ body[data-theme="dark"] .language-item:hover {
 
 .creator-item .creator-tagline {
   align-self: start;
-  min-height: 3.2em;
+  min-height: 4.8em;
 }
 
-.creator-item .creator-github {
+.creator-item .creator-buttons {
   align-self: end;
+}
+
+.creator-buttons {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.creator-buttons .creator-github {
+  padding: 0.6rem 0.8rem;
+  font-size: 0.85rem;
+  box-shadow: 3px 3px 0 var(--border);
+}
+
+.live-btn {
+  background: var(--cyan) !important;
+}
+
+body[data-theme="dark"] .live-btn {
+  background: var(--pink) !important;
 }
 
 /* Dark mode for projects */
@@ -3553,3 +3575,138 @@ body[data-theme="dark"] .nav-lazyfire {
     padding-bottom: 0.5rem;
   }
 }
+
+/* Contact Form Styling */
+.contact-form-container {
+  margin-top: 3rem;
+  background: var(--white);
+  border: var(--border-width) solid var(--border);
+  box-shadow: 8px 8px 0 var(--border);
+  padding: 2.5rem;
+  position: relative;
+  text-align: left;
+}
+
+.contact-form-container::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  width: 90px;
+  height: 35px;
+  background: rgba(168, 230, 207, 0.85); /* Accent mint sticky tape look */
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  transform: rotate(-3deg);
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: var(--border-width) solid var(--border);
+  border-radius: 4px;
+  box-shadow: inset 2px 2px 0 rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--cyan);
+  background: var(--bg);
+  box-shadow: 4px 4px 0 var(--border);
+  transform: translate(-2px, -2px);
+}
+
+body[data-theme="dark"] .form-group input:focus,
+body[data-theme="dark"] .form-group textarea:focus {
+  border-color: var(--secondary);
+}
+
+.btn-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 2rem;
+  background: var(--yellow);
+  color: var(--border);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: var(--border-width) solid var(--border);
+  border-radius: 6px;
+  box-shadow: 4px 4px 0 var(--border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-submit:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--border);
+  background: var(--cyan);
+}
+
+body[data-theme="dark"] .btn-submit:hover {
+  background: var(--pink);
+}
+
+/* Form submission status styling */
+.contact-status {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: var(--border-width) solid var(--border);
+  font-weight: 600;
+  display: none;
+  text-align: center;
+  box-shadow: 4px 4px 0 var(--border);
+}
+
+.contact-status.success {
+  display: block;
+  background: var(--accent);
+  color: #000;
+}
+
+.contact-status.error {
+  display: block;
+  background: var(--pink);
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .contact-form-container {
+    padding: 1.5rem;
+  }
+}
+
